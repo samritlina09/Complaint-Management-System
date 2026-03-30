@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Mini Complaint System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="topbar">
+        <div class="brand">ComplaintCare</div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="index.html">Complaints</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="login.html" id="authLink" class="auth-link">Login</a>
+        </div>
+    </nav>
+
+    <header class="hero hero-small">
+        <div>
+            <p class="eyebrow">Admin Overview</p>
+            <h1>Complaint Dashboard</h1>
+            <p class="hero-text">See complaint statistics and the latest submitted records.</p>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Complaints</h3>
+                <div class="stat-number" id="totalComplaints">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Open Complaints</h3>
+                <div class="stat-number" id="openComplaints">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Today</h3>
+                <div class="stat-number" id="todayComplaints">0</div>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <h2>Recent Complaints</h2>
+                <span class="count-badge">Live</span>
+            </div>
+            <p class="section-text" id="recentComplaintText">No recent complaint</p>
+            <div id="dashboardComplaints" class="complaints-list" style="margin-top: 16px;">
+                <div class="empty-state">No complaints available for the dashboard yet.</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

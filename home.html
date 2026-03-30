@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Mini Complaint System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="topbar">
+        <div class="brand">ComplaintCare</div>
+        <div class="nav-links">
+            <a href="home.html" class="active">Home</a>
+            <a href="index.html">Complaints</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html" id="authLink" class="auth-link">Login</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="panel">
+            <p class="eyebrow">Welcome to ComplaintCare</p>
+            <h1>Simple, clean, and professional complaint management.</h1>
+            <p class="hero-text">Use this website to submit complaints, view records, and manage updates from one easy dashboard.</p>
+
+            <div class="quick-actions">
+                <a href="index.html" class="btn-primary">Submit Complaint</a>
+                <a href="dashboard.html" class="btn-secondary">Open Dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <section class="home-image-section panel">
+            <img src="manage.png" alt="Complaint management" class="home-feature-image">
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Complaints</h3>
+                <div class="stat-number" id="homeComplaintCount">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Latest Category</h3>
+                <p class="section-text" id="latestCategory">No complaints yet</p>
+            </div>
+            <div class="stat-card">
+                <h3>Status</h3>
+                <div class="stat-number">Active</div>
+            </div>
+        </section>
+
+        <section class="info-grid">
+            <div class="info-card">
+                <h3>Easy to Use</h3>
+                <p>Submit complaints quickly with a simple and clear form.</p>
+            </div>
+            <div class="info-card">
+                <h3>Dashboard View</h3>
+                <p>See complaint counts and recent records in one place.</p>
+            </div>
+            <div class="info-card">
+                <h3>Track Your Complaint</h3>
+                <p>Check real-time status of your submitted complaints easily.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

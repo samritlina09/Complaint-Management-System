@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Management | Mini Complaint System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="topbar">
+        <div class="brand">ComplaintCare</div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="index.html" class="active">Complaints</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html" id="authLink" class="auth-link">Login</a>
+        </div>
+    </nav>
+
+    <header class="hero hero-small">
+        <div>
+            <p class="eyebrow">Mini Complaint System</p>
+            <h1>Complaint Management Page</h1>
+            <p class="hero-text">Submit new complaints and track all records in one clean place.</p>
+        </div>
+    </header>
+
+    <main class="page-shell two-column-layout">
+        <section class="panel form-panel">
+            <h2>Submit a Complaint</h2>
+            <p class="section-text">Fill in the details below to register a new complaint.</p>
+
+            <form id="complaintForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" required>
+                        <option value="">Select a category</option>
+                        <option value="Service">Service</option>
+                        <option value="Product">Product</option>
+                        <option value="Staff Behavior">Staff Behavior</option>
+                        <option value="Quality">Quality</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="complaint">Complaint Details</label>
+                    <textarea id="complaint" placeholder="Describe your complaint..." rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Complaint</button>
+            </form>
+        </section>
+
+        <section class="panel complaints-panel">
+            <div class="section-heading">
+                <h2>Submitted Complaints</h2>
+                <span class="count-badge"><span id="complaintCount">0</span> Total</span>
+            </div>
+
+            <div id="complaintsList" class="complaints-list">
+                <p class="no-complaints">No complaints yet. Everything looks good ✓</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
