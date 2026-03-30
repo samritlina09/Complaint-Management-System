@@ -3,75 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complaint Management | Mini Complaint System</title>
+    <title>Campus Complaint Management</title>
     <link rel="stylesheet" href="style.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
+
+    <!-- NAVBAR -->
     <nav class="topbar">
-        <div class="brand">ComplaintCare</div>
+        <div class="brand"><i class="fa-solid fa-clipboard-list"></i> CampusCare</div>
         <div class="nav-links">
             <a href="home.html">Home</a>
             <a href="index.html" class="active">Complaints</a>
             <a href="dashboard.html">Dashboard</a>
-            <a href="login.html" id="authLink" class="auth-link">Login</a>
+            <a href="login.html">Login</a>
         </div>
     </nav>
 
+    <!-- HERO -->
     <header class="hero hero-small">
         <div>
-            <p class="eyebrow">Mini Complaint System</p>
-            <h1>Complaint Management Page</h1>
-            <p class="hero-text">Submit new complaints and track all records in one clean place.</p>
+            <p class="eyebrow">Student Complaint System</p>
+            <h1>Raise Your Campus Issue</h1>
+            <p class="hero-text">
+                Submit complaints related to hostel, academics, and campus facilities and track them easily.
+            </p>
         </div>
     </header>
 
+    <!-- MAIN -->
     <main class="page-shell two-column-layout">
+
+        <!-- FORM -->
         <section class="panel form-panel">
             <h2>Submit a Complaint</h2>
-            <p class="section-text">Fill in the details below to register a new complaint.</p>
+            <p class="section-text">Fill in your details to report a campus issue.</p>
 
             <form id="complaintForm">
+
                 <div class="form-group">
-                    <label for="name">Your Name</label>
+                    <label for="name">Student Name</label>
                     <input type="text" id="name" placeholder="Enter your name" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <label for="email">College Email</label>
+                    <input type="email" id="email" placeholder="Enter your college email" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="category">Category</label>
+                    <label for="category">Complaint Category</label>
                     <select id="category" required>
-                        <option value="">Select a category</option>
-                        <option value="Service">Service</option>
-                        <option value="Product">Product</option>
-                        <option value="Staff Behavior">Staff Behavior</option>
-                        <option value="Quality">Quality</option>
-                        <option value="Other">Other</option>
+                        <option value="">Select category</option>
+                        <option> Hostel Issue</option>
+                        <option> Academic Issue</option>
+                        <option> Mess/Food Issue</option>
+                        <option> Infrastructure</option>
+                        <option> Other</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="complaint">Complaint Details</label>
-                    <textarea id="complaint" placeholder="Describe your complaint..." rows="5" required></textarea>
+                    <textarea id="complaint" placeholder="Describe your issue clearly..." rows="5" required></textarea>
                 </div>
 
                 <button type="submit" class="btn-submit">Submit Complaint</button>
             </form>
         </section>
 
+        <!-- LIST -->
         <section class="panel complaints-panel">
             <div class="section-heading">
-                <h2>Submitted Complaints</h2>
+                <h2>Student Complaints</h2>
                 <span class="count-badge"><span id="complaintCount">0</span> Total</span>
             </div>
 
             <div id="complaintsList" class="complaints-list">
-                <p class="no-complaints">No complaints yet. Everything looks good ✓</p>
+                <p class="no-complaints">No complaints yet. Campus is peaceful </p>
             </div>
         </section>
+
     </main>
 
     <script src="script.js"></script>

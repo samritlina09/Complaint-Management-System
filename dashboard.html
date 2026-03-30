@@ -3,54 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Mini Complaint System</title>
+    <title>Dashboard | CampusCare</title>
     <link rel="stylesheet" href="style.css">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
+
+    <!-- NAVBAR -->
     <nav class="topbar">
-        <div class="brand">ComplaintCare</div>
+        <div class="brand"><i class="fa-solid fa-clipboard-list"></i> CampusCare</div>
         <div class="nav-links">
             <a href="home.html">Home</a>
             <a href="index.html">Complaints</a>
             <a href="dashboard.html" class="active">Dashboard</a>
-            <a href="login.html" id="authLink" class="auth-link">Login</a>
+            <a href="login.html">Login</a>
         </div>
     </nav>
 
+    <!-- HERO -->
     <header class="hero hero-small">
         <div>
-            <p class="eyebrow">Admin Overview</p>
-            <h1>Complaint Dashboard</h1>
-            <p class="hero-text">See complaint statistics and the latest submitted records.</p>
+            <p class="eyebrow">Admin Panel</p>
+            <h1>Campus Complaint Dashboard</h1>
+            <p class="hero-text">
+                Monitor student complaints, track issues, and manage resolutions efficiently.
+            </p>
         </div>
     </header>
 
+    <!-- MAIN -->
     <main class="page-shell">
+
+        <!-- STATS -->
         <section class="stats-grid">
             <div class="stat-card">
                 <h3>Total Complaints</h3>
                 <div class="stat-number" id="totalComplaints">0</div>
             </div>
+
             <div class="stat-card">
-                <h3>Open Complaints</h3>
+                <h3>Pending Complaints</h3>
                 <div class="stat-number" id="openComplaints">0</div>
             </div>
+
             <div class="stat-card">
-                <h3>Today</h3>
+                <h3>Today's Complaints</h3>
                 <div class="stat-number" id="todayComplaints">0</div>
             </div>
         </section>
 
+        <!-- RECENT -->
         <section class="panel">
             <div class="section-heading">
-                <h2>Recent Complaints</h2>
+                <h2>Recent Student Complaints</h2>
                 <span class="count-badge">Live</span>
             </div>
-            <p class="section-text" id="recentComplaintText">No recent complaint</p>
+
+            <p class="section-text" id="recentComplaintText">
+                No recent complaints submitted.
+            </p>
+
             <div id="dashboardComplaints" class="complaints-list" style="margin-top: 16px;">
-                <div class="empty-state">No complaints available for the dashboard yet.</div>
+                <div class="empty-state">
+                    No complaints available yet. Campus is running smoothly 
+                </div>
             </div>
         </section>
+
     </main>
 
     <script src="script.js"></script>

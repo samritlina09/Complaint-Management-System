@@ -3,41 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Mini Complaint System</title>
+    <title>Login | CampusCare</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="auth-page" data-auth-page="true">
+
+    <!-- NAVBAR -->
     <nav class="topbar">
-        <div class="brand">ComplaintCare</div>
+        <div class="brand"><i class="fa-solid fa-clipboard-list"></i> CampusCare</div>
         <div class="nav-links">
             <a href="home.html">Home</a>
             <a href="index.html">Complaints</a>
             <a href="dashboard.html">Dashboard</a>
-            <a href="login.html" class="active auth-link" id="authLink">Login</a>
+            <a href="login.html" class="active auth-link">Login</a>
         </div>
     </nav>
 
+    <!-- MAIN -->
     <main class="page-shell auth-wrapper">
         <section class="login-layout single-card-layout">
             <div class="panel login-card auth-card centered-card">
-                <span class="auth-badge">Secure Access</span>
-                <h1 class="auth-title">Welcome back to ComplaintCare</h1>
-                <p class="section-text">Sign in to manage complaints, review dashboard insights, and monitor system activity professionally.</p>
 
+                <span class="auth-badge">Secure Access</span>
+
+                <h1 class="auth-title">Welcome back to CampusCare</h1>
+
+                <p class="section-text">
+                    Sign in to submit and track your campus complaints related to hostel, academics, and facilities.
+                </p>
+
+                <!-- FORM -->
                 <form id="loginForm" autocomplete="off">
+
+                    <!-- hidden inputs to prevent autofill -->
+                    <input type="text" style="display:none">
+                    <input type="password" style="display:none">
+
                     <div class="form-group">
-                        <label for="loginEmail">Email Address</label>
+                        <label for="loginEmail">College Email</label>
                         <div class="input-wrap">
-                            <span class="input-icon"></span>
-                            <input type="email" id="loginEmail" name="loginEmail" placeholder="Enter your email" autocomplete="off" required>
+                            <input type="email" id="loginEmail" name="loginEmail"
+                                   placeholder="Enter your college email"
+                                   autocomplete="off" required>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="loginPassword">Password</label>
                         <div class="input-wrap password-wrap">
-                            <span class="input-icon"></span>
-                            <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password" autocomplete="new-password" required>
+                            <input type="password" id="loginPassword" name="loginPassword"
+                                   placeholder="Enter your password"
+                                   autocomplete="new-password" required>
                             <button type="button" class="toggle-password" id="togglePassword">👁</button>
                         </div>
                     </div>
@@ -45,15 +62,18 @@
                     <button type="submit" class="btn-submit">Login</button>
                 </form>
 
+                <!-- OPTIONS -->
                 <div class="auth-options">
                     <a href="forgot-password.html">Forgot password?</a>
                 </div>
 
                 <p id="loginStatus" class="login-status"></p>
 
+                <!-- FOOTER -->
                 <div class="auth-footer">
                     Don't have an account? <a href="register.html">Register now</a>
                 </div>
+
             </div>
         </section>
     </main>

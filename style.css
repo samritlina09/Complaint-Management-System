@@ -1,3 +1,136 @@
+/* HERO MODERN */
+.hero-modern {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+    background: #f8fafc; /* light clean bg */
+}
+
+.hero-left {
+    max-width: 50%;
+}
+/* HERO TEXT FIX */
+.hero-left h1 {
+    font-size: 48px;   /* 👈 bigger */
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+.hero-left p {
+    font-size: 18px;   /* 👈 bigger */
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary,
+.btn-outline {
+    padding: 14px 26px;   /* bigger buttons */
+    font-size: 16px;
+    font-weight: 600;
+}
+.hero-right img {
+    width: 400px;
+}
+
+/* FEATURES */
+/* FEATURE SECTION */
+.features {
+    padding: 60px 10%;
+    text-align: center;
+    background: #f8fafc;
+}
+
+.features h2 {
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+/* GRID */
+.feature-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* CARD DESIGN (MATCHES STATS STYLE) */
+.feature-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+/* HOVER EFFECT */
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* ICON STYLE */
+.feature-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* TEXT */
+.feature-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* STATS */
+/* MODERN STATS SECTION */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 10%;
+    background: #f8fafc;
+}
+
+.stat-box {
+    background: white;
+    padding: 25px 35px;
+    border-radius: 16px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-box h2 {
+    font-size: 32px;
+    color: #4f46e5;
+    margin-bottom: 8px;
+}
+
+.stat-box p {
+    color: #666;
+    font-size: 14px;
+}
+
+.stat-box h2 {
+    font-size: 28px;
+    color: #4f46e5;
+}
 :root {
     --primary: #20b15a;
     --primary-dark: #168947;
@@ -18,9 +151,12 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(180deg, #f5fff7 0%, #eef2ff 100%);
     color: var(--text);
     min-height: 100vh;
+    body {
+    margin: 0;
+    background: #ffffff; /* 👈 clean white */
+}
 }
 
 body.auth-page {
@@ -33,20 +169,20 @@ a {
 
 .topbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 16px 5%;
-    background: #8ce0a5;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    justify-content: space-between;
+    padding: 20px 80px;   /* 👈 equal left-right space */
+    background: #7acb9a;
+   
 }
 
 .brand {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #0b5d2a;
+    font-size: 50px;
+    font-weight: 900;
+    color: #0f3d2e;
+    margin-left: 40px;  /* 👈 THIS fixes your issue */
+    letter-spacing: 1px;
+    
 }
 
 .nav-links {
@@ -56,6 +192,7 @@ a {
 }
 
 .nav-links a {
+    font-size: 16px;
     color: #184b28;
     font-weight: 600;
     padding: 8px 14px;
@@ -536,20 +673,39 @@ textarea:focus {
     }
 }
 
-@media (max-width: 640px) {
-    .topbar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
 
-    .nav-links {
-        width: 100%;
-    }
+    /* NAVBAR FIX */
+/* NAVBAR FIX */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: #7acb9a;
+}
 
-    .section-heading,
-    .complaint-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+/* BRAND */
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0f3d2e;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0f3d2e;
+    font-weight: 500;
+}
+
+/* ACTIVE LINK */
+.nav-links a.active {
+    background: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
 }
